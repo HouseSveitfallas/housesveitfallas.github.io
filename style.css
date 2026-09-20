@@ -81,76 +81,32 @@ footer{padding:55px 20px;text-align:center;display:flex;flex-direction:column;ga
   }
 }
 
-<section class="members-section section" id="members-detail">
-  <div class="members-heading">
-    <p class="section-kicker">MEMBERS OF THE HOUSE</p>
-    <h2>Those Who Bear the Name</h2>
-    <p class="members-intro">Nine paths. One House. Individual records will expand as each member's story becomes part of the canon of House Sveitfallas.</p>
-  </div>
+/* HOUSE SVEITFALLAS — MEMBERS V1
+Paste at the END of style.css */
 
-  <div class="member-grid">
-    <article class="member-card">
-      <div class="member-number">I</div><div class="member-sigil">✦</div>
-      <h3>Drest Sveitfallas</h3><p class="member-role">Dwarf • Protection Paladin</p>
-      <div class="member-rule"></div><p class="member-trade">Mining • Blacksmithing</p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">II</div><div class="member-sigil">✧</div>
-      <h3>Galdr Sveitfallas</h3><p class="member-role">Skyborne Elf • Mage</p>
-      <div class="member-rule"></div><p class="member-trade">Tailoring • Enchanting</p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">III</div><div class="member-sigil">✚</div>
-      <h3>Sláinte Sveitfallas</h3><p class="member-role">Gnome • Priest</p>
-      <div class="member-rule"></div><p class="member-trade">Herbalism • Alchemy</p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">IV</div><div class="member-sigil">◆</div>
-      <h3>Calico Sveitfallas</h3><p class="member-role">Human • Rogue</p>
-      <div class="member-rule"></div><p class="member-trade">Engineering • Skinning</p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">V</div><div class="member-sigil">❧</div>
-      <h3>Brân Sveitfallas</h3><p class="member-role">Skyborne Elf • Druid</p>
-      <div class="member-rule"></div><p class="member-trade soft">Herbalism • Alchemy <span>provisional</span></p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">VI</div><div class="member-sigil">ϟ</div>
-      <h3>Vedr Sveitfallas</h3><p class="member-role">Dwarf • Shaman</p>
-      <div class="member-rule"></div><p class="member-trade soft">Mining • Engineering <span>provisional</span></p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">VII</div><div class="member-sigil">⚔</div>
-      <h3>Cath Sveitfallas</h3><p class="member-role">Human • Warrior</p>
-      <div class="member-rule"></div><p class="member-trade soft">Mining • Blacksmithing <span>provisional</span></p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">VIII</div><div class="member-sigil">➶</div>
-      <h3>Fionn Sveitfallas</h3><p class="member-role">Night Elf • Hunter</p>
-      <div class="member-rule"></div><p class="member-trade soft">Skinning • Leatherworking <span>provisional</span></p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-
-    <article class="member-card">
-      <div class="member-number">IX</div><div class="member-sigil">☾</div>
-      <h3>Mallacht Sveitfallas</h3><p class="member-role">Gnome • Warlock</p>
-      <div class="member-rule"></div><p class="member-trade soft">Tailoring • Enchanting <span>provisional</span></p>
-      <p class="member-status">Record awaiting chronicle.</p>
-    </article>
-  </div>
-</section>
-
+.members-section{max-width:1220px}
+.members-heading{text-align:center;max-width:820px;margin:0 auto 48px}
+.members-intro{color:#bdb4a3;font-size:1.15rem;line-height:1.6}
+.member-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.member-card{
+  position:relative;min-height:295px;padding:34px 28px 30px;text-align:center;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 10%,rgba(23,71,127,.17),transparent 42%),
+    linear-gradient(145deg,rgba(22,28,36,.97),rgba(7,11,16,.98));
+  border:1px solid var(--line);
+  box-shadow:0 14px 35px rgba(0,0,0,.2);
+}
+.member-card:before,.member-card:after{content:"";position:absolute;width:38px;height:38px;opacity:.55}
+.member-card:before{left:8px;top:8px;border-left:1px solid var(--gold);border-top:1px solid var(--gold)}
+.member-card:after{right:8px;bottom:8px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.member-number{position:absolute;left:18px;top:15px;font-family:Cinzel,serif;color:rgba(224,189,120,.36);font-size:.78rem;letter-spacing:.08em}
+.member-sigil{font-size:1.8rem;color:var(--gold2);height:42px;text-shadow:0 0 18px rgba(224,189,120,.18)}
+.member-card h3{margin:9px 0 5px;font-size:1.34rem}
+.member-role{margin:0;color:#d1c6b3;font-style:italic;font-size:1.02rem}
+.member-rule{height:1px;width:74px;margin:22px auto 17px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.member-trade{font-family:Cinzel,serif;font-size:.7rem;letter-spacing:.09em;color:var(--gold2);text-transform:uppercase}
+.member-trade.soft{color:#bda77d}
+.member-trade span{display:block;margin-top:6px;font-family:"EB Garamond",Georgia,serif;font-size:.78rem;letter-spacing:.12em;color:#777;text-transform:uppercase}
+.member-status{margin-top:22px;color:#777;font-style:italic;font-size:.92rem}
+@media(max-width:900px){.member-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.member-grid{grid-template-columns:1fr}.member-card{min-height:270px}}
