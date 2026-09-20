@@ -38,3 +38,45 @@ h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;margin:.25em 0 .5em;color:#
 footer{padding:55px 20px;text-align:center;display:flex;flex-direction:column;gap:9px;background:#040608;border-top:1px solid var(--line)}footer strong{font-family:Cinzel,serif;color:var(--gold2);letter-spacing:.15em}footer span{font-size:.75rem;letter-spacing:.2em;color:var(--muted)}footer small{margin-top:16px;color:#777;max-width:650px;align-self:center}
 @media(max-width:850px){.menu-toggle{display:block}.nav{display:none;position:absolute;top:74px;left:0;right:0;padding:22px;background:#080b10;border-bottom:1px solid var(--line);flex-direction:column;text-align:center}.nav.open{display:flex}.hero{padding-top:30px}.arms-wrap{width:min(70vw,500px)}.cards{grid-template-columns:1fr}.record{grid-template-columns:1fr}.record img{max-width:480px;justify-self:center}}
 @media(max-width:520px){h1{font-size:2.25rem}.eyebrow{font-size:.61rem}.motto{font-size:.62rem;line-height:1.55}.arms-wrap{width:min(84vw,440px)}.hero{padding-left:14px;padding-right:14px}}
+
+
+/* House Sveitfallas — Hero V2 centering patch
+   Paste this at the VERY END of style.css, or replace style.css with this patch merged into your current file.
+   The key fix is forcing the hero and its inner frame to span the viewport symmetrically. */
+
+.hero {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-frame {
+  width: min(920px, calc(100% - 40px));
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-frame > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arms-wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 520px) {
+  .hero-frame {
+    width: min(100%, calc(100% - 16px));
+  }
+}
