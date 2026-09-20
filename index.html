@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The digital chronicle and family archive of House Sveitfallas.">
+  <title>House Sveitfallas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#home">HOUSE SVEITFALLAS</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#house">The House</a>
+      <a href="#heraldry">Heraldry</a>
+      <a href="#members">Members</a>
+      <a href="#chronicles">Chronicles</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <img class="arms" src="assets/house-sveitfallas-heraldry.png" alt="Heraldry of House Sveitfallas">
+      <div class="hero-copy">
+        <p class="eyebrow">THE ARCHIVE OF</p>
+        <h1>HOUSE SVEITFALLAS</h1>
+        <p class="triad">STAND <span>•</span> ENDURE <span>•</span> RISE</p>
+        <p class="motto">VERITATE STAMUS <span>•</span> IN PUGNA PERSEVERAMUS <span>•</span> FIDE VINCIMUS</p>
+        <a class="button" href="#house">Enter the Chronicle</a>
+      </div>
+    </section>
+
+    <section class="intro section" id="house">
+      <p class="section-kicker">THE HOUSE</p>
+      <h2>A name carried together.</h2>
+      <p class="lead">House Sveitfallas is the shared family identity of those who bear its name across Azeroth. Its story will be written through the characters, journeys, victories, losses, traditions, and memories created together.</p>
+      <p class="note">The deeper history of the House will be recorded here as the lore becomes canon.</p>
+    </section>
+
+    <section class="cards section">
+      <article class="card" id="heraldry">
+        <span class="roman">I</span>
+        <h3>The Heraldry</h3>
+        <p>The arms, supporters, symbols, colors, and words that represent the identity of House Sveitfallas.</p>
+        <a href="#heraldry-detail">Open the heraldic record →</a>
+      </article>
+      <article class="card" id="members">
+        <span class="roman">II</span>
+        <h3>The Bloodline</h3>
+        <p>A living record of the members who bear the Sveitfallas name and the paths they walk.</p>
+        <a href="#members-detail">View the members →</a>
+      </article>
+      <article class="card" id="chronicles">
+        <span class="roman">III</span>
+        <h3>The Chronicles</h3>
+        <p>Adventures, milestones, battles, discoveries, and family stories preserved as the House grows.</p>
+        <a href="#chronicles-detail">Read the chronicles →</a>
+      </article>
+    </section>
+
+    <section class="record section" id="heraldry-detail">
+      <div>
+        <p class="section-kicker">THE HERALDIC RECORD</p>
+        <h2>Stand. Endure. Rise.</h2>
+        <p>The principal arms of House Sveitfallas unite the imagery chosen to represent the House. This archive will preserve both the arms themselves and the meaning assigned to each element.</p>
+        <p class="motto-large">Veritate Stamus<br>In Pugna Perseveramus<br>Fide Vincimus</p>
+      </div>
+      <img src="assets/house-sveitfallas-heraldry.png" alt="Full heraldic achievement of House Sveitfallas">
+    </section>
+
+    <section class="placeholder section" id="members-detail">
+      <p class="section-kicker">MEMBERS OF THE HOUSE</p>
+      <h2>The roster will grow with the family.</h2>
+      <p>Character portraits and individual records will be added here as members of House Sveitfallas are established in WoW Forever.</p>
+    </section>
+
+    <section class="placeholder section" id="chronicles-detail">
+      <p class="section-kicker">FROM THE ARCHIVES</p>
+      <h2>The first chronicle is yet to be written.</h2>
+      <p>Future entries will preserve the adventures and milestones of House Sveitfallas as an ongoing family chronicle.</p>
+    </section>
+
+    <section class="placeholder section" id="gallery">
+      <p class="section-kicker">THE GALLERY</p>
+      <h2>Images of the House.</h2>
+      <p>Heraldry, portraits, screenshots, artifacts, maps, and other artwork will eventually be gathered here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>HOUSE SVEITFALLAS</strong>
+    <span>STAND • ENDURE • RISE</span>
+    <small>A family-created World of Warcraft fan archive. World of Warcraft and related marks belong to their respective owners.</small>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
