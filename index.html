@@ -22,14 +22,20 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-glow"></div>
-      <img class="arms" src="assets/house-sveitfallas-heraldry.png" alt="Heraldry of House Sveitfallas">
-      <div class="hero-copy">
-        <p class="eyebrow">THE ARCHIVE OF</p>
+      <div class="hero-frame">
+        <p class="eyebrow">THE ARCHIVE OF THE HOUSE</p>
         <h1>HOUSE SVEITFALLAS</h1>
+
+        <div class="arms-wrap">
+          <span class="corner corner-tl"></span><span class="corner corner-tr"></span>
+          <img class="arms" src="assets/house-sveitfallas-heraldry.png" alt="Heraldry of House Sveitfallas">
+          <span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        </div>
+
         <p class="triad">STAND <span>•</span> ENDURE <span>•</span> RISE</p>
         <p class="motto">VERITATE STAMUS <span>•</span> IN PUGNA PERSEVERAMUS <span>•</span> FIDE VINCIMUS</p>
-        <a class="button" href="#house">Enter the Chronicle</a>
+        <a class="button" href="#house">ENTER THE CHRONICLE</a>
+        <a class="scroll-cue" href="#house" aria-label="Continue to The House">⌄</a>
       </div>
     </section>
 
@@ -42,20 +48,17 @@
 
     <section class="cards section">
       <article class="card" id="heraldry">
-        <span class="roman">I</span>
-        <h3>The Heraldry</h3>
+        <span class="roman">I</span><h3>The Heraldry</h3>
         <p>The arms, supporters, symbols, colors, and words that represent the identity of House Sveitfallas.</p>
         <a href="#heraldry-detail">Open the heraldic record →</a>
       </article>
       <article class="card" id="members">
-        <span class="roman">II</span>
-        <h3>The Bloodline</h3>
+        <span class="roman">II</span><h3>The Bloodline</h3>
         <p>A living record of the members who bear the Sveitfallas name and the paths they walk.</p>
         <a href="#members-detail">View the members →</a>
       </article>
       <article class="card" id="chronicles">
-        <span class="roman">III</span>
-        <h3>The Chronicles</h3>
+        <span class="roman">III</span><h3>The Chronicles</h3>
         <p>Adventures, milestones, battles, discoveries, and family stories preserved as the House grows.</p>
         <a href="#chronicles-detail">Read the chronicles →</a>
       </article>
@@ -72,41 +75,30 @@
     </section>
 
     <section class="placeholder section" id="members-detail">
-      <p class="section-kicker">MEMBERS OF THE HOUSE</p>
-      <h2>The roster will grow with the family.</h2>
+      <p class="section-kicker">MEMBERS OF THE HOUSE</p><h2>The roster will grow with the family.</h2>
       <p>Character portraits and individual records will be added here as members of House Sveitfallas are established in WoW Forever.</p>
     </section>
 
     <section class="placeholder section" id="chronicles-detail">
-      <p class="section-kicker">FROM THE ARCHIVES</p>
-      <h2>The first chronicle is yet to be written.</h2>
+      <p class="section-kicker">FROM THE ARCHIVES</p><h2>The first chronicle is yet to be written.</h2>
       <p>Future entries will preserve the adventures and milestones of House Sveitfallas as an ongoing family chronicle.</p>
     </section>
 
     <section class="placeholder section" id="gallery">
-      <p class="section-kicker">THE GALLERY</p>
-      <h2>Images of the House.</h2>
+      <p class="section-kicker">THE GALLERY</p><h2>Images of the House.</h2>
       <p>Heraldry, portraits, screenshots, artifacts, maps, and other artwork will eventually be gathered here.</p>
     </section>
   </main>
 
   <footer>
-    <strong>HOUSE SVEITFALLAS</strong>
-    <span>STAND • ENDURE • RISE</span>
+    <strong>HOUSE SVEITFALLAS</strong><span>STAND • ENDURE • RISE</span>
     <small>A family-created World of Warcraft fan archive. World of Warcraft and related marks belong to their respective owners.</small>
   </footer>
 
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }));
+    const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
+    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});
+    document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
   </script>
 </body>
 </html>
